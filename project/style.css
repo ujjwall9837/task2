@@ -1,0 +1,93 @@
+button {
+  cursor: pointer;
+  padding: 0 12px;
+  width: 80px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-weight: bolder;
+  text-align: center;
+}
+body {
+  background: linear-gradient(65deg, rgb(181, 41, 231), rgb(216, 43, 43));
+}
+.button-action {
+  display: inline;
+}
+.active {
+  background: black;
+  /* color: white; */
+}
+.italic {
+  font-style: italic;
+}
+.download {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.btn {
+  margin: 0 20pxpx;
+}
+.text_type_bold {
+  font-style: none;
+  font-weight: bold;
+}
+.image {
+  height: 30vh;
+  width: 30vw;
+  float: left;
+  margin-bottom: 30px;
+}
+.name {
+  background-color: lavender;
+  padding: auto;
+  top: 10px;
+}
+.heading {
+  color: cyan;
+}
+form button {
+  width: 50px;
+  height: 40px;
+  border: none;
+  background: teal;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+.container1 {
+  margin-top: 3%;
+}
+.list-item {
+  margin-left: auto;
+  left: 5%;
+}
+ul {
+  list-style: none;
+  width: 500px;
+}
+ul li {
+  width: 100%;
+  padding: 0 5px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin: 5px 0;
+  background: #fff;
+  box-shadow: -3px 6px 4px #222;
+  height: 20px;
+  left: 5%;
+  transition: 0.5s linear;
+}
+ul li span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  text-align: center;
+  background: #e00;
+}
+/* .text_type_italic{
+      font-weight:normal;
+   font-style:italic;
+  } */

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand disabled">WordSheet</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <!-- <a class="nav-link active" aria-current="page" href="#">Bold</a> -->
+                <a
+                  id="bold-btn"
+                  class="nav-link"
+                  href="#"
+                  onclick="ConvertToBold()"
+                  >Bold</a
+                >
+              </li>
+              <li class="nav-item">
+                <!-- //   <a class="nav-link" href="#">Italic</a> // -->
+                <a
+                  id="italic"
+                  class="nav-link"
+                  href="#"
+                  onclick="ConvertToItalic()"
+                  >Italic</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="makePDF()"
+                  >Convert to PDF</a
+                >
+              </li>
+            </ul>
+            <!-- <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <h1 class="text-center">Simple WordSheet App</h1>
+        <div class="container text-center image">
+          <img
+            class="image"
+            src="/project/company-img.jpg"
+            height="200"
+          /><br />
+          <input type="file" onchange="onSelectFile($event)" id="file" />
+        </div>
+        <div ng-controller="MyCtrl">
+          <textarea
+            id="str"
+            class="textarea"
+            ng-model="message"
+            required
+            rows="8"
+            cols="50"
+            placeholder="Enter Text here"
+            width="50vw"
+          ></textarea>
+        </div>
+        <div class="button-action">
+          <button
+            class="btn btn-danger"
+            id="italic"
+            onclick="ConvertToItalic()"
+          >
+            Italic
+          </button>
+        </div>
+        <div class="button-action">
+          <button
+            id="bold-btn"
+            class="btn btn-secondary control-btn"
+            onclick="ConvertToBold()"
+          >
+            Bold
+          </button>
+
+          <br />
+          <button class="download" onclick="makePDF()">Make PDF</button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <input
+        class="name"
+        id="input"
+        type="text"
+        placeholder="Enter File name here "
+        spellcheck="false"
+      />
+    </div> -->
+
+    <h1 class="heading">Add and remove list of sheet</h1>
+    <form>
+      <input
+        type="text"
+        name="text"
+        id="input"
+        class="name"
+        placeholder="Enter File name "
+        spellcheck="false"
+        required
+      />
+      <button type="submit" class="btn-list" aria-placeholder="Add">
+        Add
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+    </form>
+    <div class="container1">
+      <ul>
+        <li class="list-item">
+          First Make PDF then add file in list <span>X</span>
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
